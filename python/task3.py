@@ -1,23 +1,27 @@
 baseinput = int(input())
 userinput = int(input())
 
-def NextBase(Base,Number):
+def NextBase(Base, Number):
     if Base == 0:
         return "0"
     
     digits = []  
 
-    while Base != 0:
-        x = Base % 3
+    while Number != 0:
+        x = Number % Base  # Fixed: Calculate modulo with Base, not Base % Base
         if x < 0:
-            x += 3
+            x += Base
         digits.append(str(x))
-        Base //= 3
+        Number //= Base  # Fixed: Divide by Base, not Base //= Base
     return "".join(reversed(digits))
 
-print(NextBase(baseinput,userinput))
+Array = []
 
-'''
+
 while(userinput != -1):
 
-    userinput = int(input())'''
+    Array.append(NextBase(baseinput, userinput))
+    userinput = int(input())
+
+for i in Array:
+    print(i)
