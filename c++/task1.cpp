@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <string>
 
 using namespace std;
@@ -6,17 +7,17 @@ using namespace std;
 
 int main(){
 
-    string input = "";
+    string userinput = "";
 
-    getline(cin,input);
+    getline(cin,userinput);
     
 
-    int Array[50];
-    for(int index = 0 ; index < input.size();index++){
-        Array[index] = input[index];
+    vector<int>Array;
+    for(int index = 0 ; index < userinput.size();index++){
+        Array.push_back(userinput[index]);
     }
 
-    for(int index = 0 ; index < input.size();index++){
+    for(int index = 0 ; index < userinput.size();index++){
         cout<<int(Array[index])<<" ";
     }
     cout<<endl;
