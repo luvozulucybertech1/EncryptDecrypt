@@ -6,13 +6,13 @@ using Array = vector<int>;
 
 int main(){
 
-    int userinput = -1;
+    int UserInput = -1;
     Array Store;
 
-    cin>>userinput;
-    while(userinput != -1){
-        Store.push_back(userinput);
-        cin>>userinput;
+    cin>>UserInput;
+    while(UserInput != -1){
+        Store.push_back(UserInput);
+        cin>>UserInput;
     }
 
     for(int m : Store){

@@ -7,17 +7,17 @@ using namespace std;
 
 int main(){
 
-    string userinput = "";
+    string UserInput = "";
 
-    getline(cin,userinput);
+    getline(cin,UserInput);
     
 
     vector<int>Array;
-    for(int index = 0 ; index < userinput.size();index++){
-        Array.push_back(userinput[index]);
+    for(int index = 0 ; index < UserInput.size();index++){
+        Array.push_back(UserInput[index]);
     }
 
-    for(int index = 0 ; index < userinput.size();index++){
+    for(int index = 0 ; index < UserInput.size();index++){
         cout<<int(Array[index])<<" ";
     }
     cout<<endl;
