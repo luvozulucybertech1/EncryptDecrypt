@@ -19,8 +19,8 @@ def Decrypt(base,Number):
     while number != 0:
         output += Array[int(remainder(base,number)[0])]
         number = int(remainder(base,number)[1])
-    if number == 0:
-        return 0
+    if Number == 0:
+        return '0'
     else:
         return output
 
