@@ -1,11 +1,13 @@
 
 userinput = int()
-terminalOutput = str()
+
 
 userinput = int(input())
 
 def Decrypt(userinput):
+    terminalOutput = str()
     while userinput != -1:
         terminalOutput += chr(userinput)
         userinput = int(input())
-print(terminalOutput)
+    return terminalOutput
+print(Decrypt(userinput))
