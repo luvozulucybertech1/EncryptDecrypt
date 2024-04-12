@@ -19,15 +19,20 @@ def Decrypt(base,Number):
     while number != 0:
         output += Array[int(remainder(base,number)[0])]
         number = int(remainder(base,number)[1])
-    return output
+    if number == 0:
+        return 0
+    else:
+        return output
 
 
 
 while(userinput != -1):
-
-    reversedoutput = Decrypt(baseinput,userinput)[::-1]
-    Array.append(reversedoutput)
-    userinput = int(input())
+    if(userinput < 0 and (userinput != -1)):
+        userinput = int(input())    
+    else:
+        reversedoutput = Decrypt(baseinput,userinput)[::-1]
+        Array.append(reversedoutput)
+        userinput = int(input())
 
 for i in Array:
     print(i)
